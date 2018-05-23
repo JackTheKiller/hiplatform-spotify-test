@@ -33,7 +33,7 @@ export class NavComponent {
         localStorage.removeItem('redirect');
         this.router.navigate(redirectURL.split('/'));
       } else {
-        this.router.navigate(['/']);
+        this.router.navigate(['']);
       }
     }
   }
