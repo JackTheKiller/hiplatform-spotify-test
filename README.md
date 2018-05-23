@@ -1,27 +1,72 @@
-# HiplatformSpotifyTest
+# My solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+## Technologies
 
-## Development server
+* [Angular 6](https://angular.io/)
+* [Angular Material 6](https://material.angular.io/)
+* [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Developed using [Visual Studio Code](https://code.visualstudio.com/).
 
-## Code scaffolding
+## Known Issues
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* sometimes the IndexedDB isn't ready to make a transaction (needs a wrapper)
 
-## Build
+# Original Description
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Hi Platform Front-End Challenge
 
-## Running unit tests
+#### What
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Everyone loves music. So we'd like you to create a web app based on Spotify's API to retrive data about **Artists**, **Albums** or **Tracks**.
 
-## Running end-to-end tests
+Based on user search choice and input on a search bar, you **must** retrieve a list containing the following info:
+* If Artist search is selected:
+  * All arists matching the word searched, containing: Image, name, genres and popularity;
+* If Album search is selected:
+  * All albums matching the word searched, containing: Image, name, artist(s), and availability;
+* If Track search is selected:
+  * All tracks matching the word searched, containing: Album Image, track name, artist name³, album name and track duration;
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+##### Details:
+* Artists must display the **FIRST** image returned on search and **genres** separated by comma;
+* Artists popularity must be tagged within:
+  * Over 80: Hot;
+  * Between 60 and 79: Cool;
+  * Between 30 and 59: Regular;
+  * Under 30: Underground
+* If a retrieved Album happens to have many Artists, display "Various artists".;
+* If a Track happens to have many Artists, display their names separated by comma;
+* Artists and Albums must be clickable, showing upon click:
+  * Artists: Latest 5 albums;
+  * Albums: All of its tracks;
+* A user can favorite Artists, Albums and Tracks;
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Musts:
+Your code must follow these requirements:
+* Use React, Vue or Angular; (Consider that we are migrating our Front-End stack to use React)
+* Fully responsive;
+* ES6+;
+* Use a module bundler (Webpack, Parcel, Browserify, etc.);
+* Linted code;
+* CSS pre-processors or CSS-in-JS;
+
+#### Nice to Have:
+* State management framework (Redux, Vuex, ngrx);
+* Automated tests;
+* Add authentication to your WebApp;
+* Turn it into a PWA;
+* Data Persistence (Cookies, DOMStorage, IndexedDB);
+* Micro animations/Micro transitions following Material Design Motion guidelines;
+* Host it somewhere as a Live Demo;
+
+Browser Support: IE11+;
+
+You **can** use UI libs as Bootstrap, Foundation, Material-UI, etc.
+
+Design it as something you'd use ;)
+
+[Spotify API reference](https://beta.developer.spotify.com/documentation/web-api/reference/search/search/) 
+
+Have fun!
