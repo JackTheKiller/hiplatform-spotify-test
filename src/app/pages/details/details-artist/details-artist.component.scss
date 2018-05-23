@@ -1,0 +1,18 @@
+:host {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+app-album {
+    display: flex;
+    flex: 1;
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}

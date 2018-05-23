@@ -1,0 +1,16 @@
+:host {
+    flex: 1;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        width: 100%;
+    }
+}
+
+.result-container {
+    padding: 20px 0;
+}

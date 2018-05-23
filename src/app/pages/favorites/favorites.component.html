@@ -1,0 +1,23 @@
+<mat-tab-group>
+  <mat-tab label="Artists">
+    <ng-template matTabContent>
+      <div class="container">
+        <app-artist *ngFor="let artist of artists" [artist]="artist" (favorite)="toggleFavorite($event)"></app-artist>
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Albums">
+    <ng-template matTabContent>
+      <div class="container albums">
+        <app-album *ngFor="let album of albums" [album]="album" (favorite)="toggleFavorite($event)"></app-album>
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="Tracks">
+    <ng-template matTabContent>
+      <div class="container">
+        <app-track *ngFor="let track of tracks" [track]="track" (favorite)="toggleFavorite($event)"></app-track>
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

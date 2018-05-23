@@ -1,0 +1,7 @@
+<app-album *ngIf="album" [album]="album" [hideDetailsButton]="true"></app-album>
+
+<div class="container">
+  <h2>Tracks</h2>
+
+  <app-track *ngFor="let track of album?.tracks" [track]="track"></app-track>
+</div>

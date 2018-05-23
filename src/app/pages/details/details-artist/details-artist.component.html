@@ -1,0 +1,7 @@
+<app-artist *ngIf="artist" [artist]="artist" [hideDetailsButton]="true"></app-artist>
+
+<h2>Latest 5 albums</h2>
+
+<div class="container">
+    <app-album *ngFor="let album of albums" [album]="album"></app-album>
+</div>

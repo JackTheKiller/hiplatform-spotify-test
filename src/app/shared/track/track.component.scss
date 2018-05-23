@@ -1,0 +1,23 @@
+mat-card-header,
+mat-card-content {
+    width: 50%;
+    display: inline-flex;
+    min-width: 200px;
+}
+
+mat-card-content {
+    flex-direction: row-reverse;
+}
+
+.action-bar {
+    padding: 0;
+    text-align: right
+}
+
+.header-image {
+    background-size: cover;
+}
+
+.mat-icon {
+    margin: 25%;
+}

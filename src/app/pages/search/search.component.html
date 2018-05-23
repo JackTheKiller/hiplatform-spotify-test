@@ -1,0 +1,15 @@
+<div class="search-container">
+  <mat-form-field>
+    <input matInput placeholder="Search for..." aria-label="Keyword" [(ngModel)]="keyword" (keydown.enter)="search()">
+  </mat-form-field>
+
+  <mat-button-toggle-group aria-label="Search Type" [(ngModel)]="searchType" (valueChange)="search()">
+    <mat-button-toggle value="artist">Artist</mat-button-toggle>
+    <mat-button-toggle value="album">Album</mat-button-toggle>
+    <mat-button-toggle value="track">Track</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+<div class="result-container">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,6 @@
+<app-artist *ngFor="let artist of result.artists" [artist]="artist"></app-artist>
+
+<mat-paginator  [(length)]="result.total"
+                [(pageSize)]="result.limit"
+                [pageSizeOptions]="[5, 10, 25, 50]"
+                (page)="pageEvent($event)"></mat-paginator>

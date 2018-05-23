@@ -1,0 +1,32 @@
+:host {
+    flex: 1;
+}
+
+.container {
+    padding-top: 20px;
+
+    &.albums {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+
+app-artist {
+    display: block;
+    margin-bottom: 20px;
+}
+
+app-album {
+    display: flex;
+    flex: 1;
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+app-track {
+    display: block;
+    margin-bottom: 20px;
+}

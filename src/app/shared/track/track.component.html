@@ -1,0 +1,25 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image" [style.backgroundImage]="'url('+ track.cover +')'">
+      <mat-icon *ngIf="track.avatar === ''">music_note</mat-icon>
+    </div>
+    <mat-card-title>{{ track.name }}</mat-card-title>
+    <mat-card-subtitle>
+      <span *ngFor="let artist of track.artists; let isLast = last">
+        <a [routerLink]="['/artist', artist.id]">{{ artist.name }}</a>{{ isLast ? '' : ', ' }}
+      </span>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-chip-list>
+      <mat-chip>
+        <a [routerLink]="['/album', track.album.id]">{{ track.album.name }}</a>
+      </mat-chip>
+      <mat-chip>{{ track.duration }}</mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+  <mat-card-actions class="action-bar">
+    <button mat-button *ngIf="track.favorited" (click)="toggleFavorite(track)">UNFAVORITE</button>
+    <button mat-button *ngIf="!track.favorited" (click)="toggleFavorite(track)">FAVORITE</button>
+  </mat-card-actions>
+</mat-card>

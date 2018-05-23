@@ -1,0 +1,22 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image" [style.backgroundImage]="'url('+ artist.avatar +')'">
+        <mat-icon *ngIf="artist.avatar === ''">music_note</mat-icon>
+    </div>
+    <mat-card-title>{{ artist.name }}</mat-card-title>
+    <mat-card-subtitle *ngIf="artist.popularity >= 80">hot</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="artist.popularity <= 79 && artist.popularity >= 60">cool</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="artist.popularity <= 59 && artist.popularity >= 30">Regular</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="artist.popularity < 30">Underground</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-chip-list>
+      <mat-chip *ngFor="let genre of artist.genres">{{ genre }}</mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+  <mat-card-actions class="action-bar">
+    <button mat-button *ngIf="artist.favorited" (click)="toggleFavorite(artist)">UNFAVORITE</button>
+    <button mat-button *ngIf="!artist.favorited" (click)="toggleFavorite(artist)">FAVORITE</button>
+    <button mat-button *ngIf="!hideDetailsButton" [routerLink]="['/artist', artist.id]">DETAILS</button>
+  </mat-card-actions>
+</mat-card>

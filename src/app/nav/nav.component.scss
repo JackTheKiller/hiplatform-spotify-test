@@ -1,0 +1,21 @@
+.sidenav-container {
+    height: 100%;
+}
+
+.sidenav {
+    width: 200px;
+    box-shadow: 3px 0 6px rgba(0, 0, 0, .24);
+}
+
+.content-container {
+    height: 100%;
+}
+
+.content {
+    padding: 15px 15px 10px 20px;
+    display: flex;
+}
+
+.mat-nav-list a.active {
+    background: rgba(255, 255, 255, .1);
+}
