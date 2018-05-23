@@ -10,7 +10,8 @@ Developed using [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Known Issues
 
-* sometimes the IndexedDB isn't ready to make a transaction (needs a wrapper)
+* sometimes the IndexedDB isn't ready to make a transaction (need a wrapper)
+* when published in any othe path than root, like '/hiplatform-spotify-test/', the generated file need to be manually changed so the internal Spotify service can send the correct redirect_uri (need a way to get the base href automatically)
 
 # Original Description
 
